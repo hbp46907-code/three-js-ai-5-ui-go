@@ -143,6 +143,7 @@ const state = {
   mediaLightbox: null,
   mediaLightboxStage: null,
   mediaLightboxClose: null,
+  designLightboxReturn: null,
   backgroundMusic: null,
   isBackgroundMusicBlocked: false,
   isBackgroundMusicPausedForVideo: false,
@@ -1668,8 +1669,17 @@ function createOverlayUI() {
   });
 
   state.detailBackButton.addEventListener("click", () => returnToPortfolioMenu());
+  document.querySelectorAll("[data-layer-back]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      returnToPreviousLayer();
+    });
+  });
   state.mediaLightbox.addEventListener("click", closeMediaLightbox);
-  state.mediaLightboxClose.addEventListener("click", closeMediaLightbox);
+  state.mediaLightboxClose.addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeMediaLightbox();
+  });
   state.mediaLightboxStage.addEventListener("click", (event) => event.stopPropagation());
   window.addEventListener("popstate", onBrowserHistoryBack);
   window.addEventListener("keydown", (event) => {
@@ -1681,6 +1691,14 @@ function createOverlayUI() {
       }
     }
   });
+}
+
+function returnToPreviousLayer() {
+  if (state.mediaLightbox?.classList.contains("is-visible")) {
+    closeMediaLightbox();
+    return;
+  }
+  returnToPortfolioMenu();
 }
 
 function initBackgroundMusic() {
@@ -2168,6 +2186,11 @@ function renderWorksGallery(categoryName) {
     return;
   }
 
+  if (categoryKey === "Design") {
+    renderDesignGroupedGallery(works, ui);
+    return;
+  }
+
   works.forEach((work, workIndex) => {
     state.detailGallery.append(createWorkCard(work, { isVideoCategory, workIndex, ui }));
   });
@@ -2200,6 +2223,71 @@ function getPosterFilePrefix(work) {
     .split(/[\\/]/)
     .pop() || "";
   return fileName.trim().charAt(0);
+}
+
+function renderDesignGroupedGallery(works, ui) {
+  state.detailGallery.className = "works-gallery design-gallery";
+  const designPage = SITE_CONTENT.designPage || {};
+  const groups = designPage.groups || [
+    { prefix: "1", title: "超级符号", description: "品牌核心视觉符号与延展画面。" },
+    { prefix: "2", title: "IP设计延展", description: "围绕角色或品牌 IP 的视觉延展。" },
+    { prefix: "3", title: "图标", description: "图标风格、系统符号与界面视觉。" },
+    { prefix: "4", title: "启动页", description: "启动页、开屏与入口视觉设计。" },
+  ];
+
+  groups.forEach((group) => {
+    const groupWorks = works.filter((work) => getDesignFilePrefix(work) === group.prefix);
+    state.detailGallery.append(createDesignGroupCard(group, groupWorks, ui));
+  });
+}
+
+function getDesignFilePrefix(work) {
+  const fileName = decodeURIComponent(work.src || work.title || "")
+    .split(/[\\/]/)
+    .pop() || "";
+  return fileName.trim().charAt(0);
+}
+
+function createDesignGroupCard(group, groupWorks, ui) {
+  const card = document.createElement("button");
+  card.className = "design-group-card";
+  card.type = "button";
+  card.disabled = !groupWorks.length;
+  card.setAttribute("aria-label", `${ui.viewLabelPrefix || "查看"} ${group.title}`);
+
+  const title = document.createElement("h2");
+  title.className = "design-group-title";
+  title.textContent = group.title;
+
+  const mediaFrame = document.createElement("span");
+  mediaFrame.className = "design-group-media";
+
+  if (groupWorks.length) {
+    const cover = groupWorks[0];
+    const image = document.createElement("img");
+    image.src = encodeURI(cover.src);
+    image.alt = cover.title;
+    image.loading = "lazy";
+    mediaFrame.append(image);
+  } else {
+    const empty = document.createElement("span");
+    empty.className = "design-group-empty";
+    empty.textContent = ui.emptyWorksText || "作品内容即将更新";
+    mediaFrame.append(empty);
+  }
+
+  const copy = document.createElement("span");
+  copy.className = "design-group-copy";
+  const description = document.createElement("span");
+  description.textContent = group.description || "";
+  const count = document.createElement("span");
+  count.className = "design-group-count";
+  count.textContent = `${groupWorks.length} 张图片`;
+  copy.append(description, count);
+
+  card.append(title, mediaFrame, copy);
+  card.addEventListener("click", () => openDesignGroupLightbox(group, groupWorks));
+  return card;
 }
 
 function createWorkCard(work, { isVideoCategory = false, workIndex = 0, ui = {} } = {}) {
@@ -2478,7 +2566,7 @@ function classifyMediaCard(card, width, height) {
   card.classList.toggle("is-portrait", aspect < 1.45);
 }
 
-function openMediaLightbox(work) {
+function openMediaLightbox(work, options = {}) {
   if (!state.mediaLightbox || !state.mediaLightboxStage) { return; }
   state.mediaLightboxStage.replaceChildren();
   const media = document.createElement(work.type === "video" ? "video" : "img");
@@ -2497,14 +2585,73 @@ function openMediaLightbox(work) {
   state.mediaLightboxStage.append(media);
   state.mediaLightbox.classList.add("is-visible");
   state.mediaLightbox.setAttribute("aria-hidden", "false");
+  if (options.returnToDesignGroup) {
+    state.designLightboxReturn = options.returnToDesignGroup;
+  } else {
+    state.designLightboxReturn = null;
+  }
+}
+
+function openDesignGroupLightbox(group, groupWorks) {
+  if (!state.mediaLightbox || !state.mediaLightboxStage || !groupWorks.length) { return; }
+  state.mediaLightboxStage.replaceChildren();
+
+  const gallery = document.createElement("div");
+  gallery.className = "design-lightbox-gallery";
+
+  const title = document.createElement("h2");
+  title.textContent = group.title;
+  gallery.append(title);
+
+  const grid = document.createElement("div");
+  grid.className = "design-lightbox-grid";
+
+  groupWorks.forEach((work) => {
+    const figure = document.createElement("figure");
+    const button = document.createElement("button");
+    button.className = "design-lightbox-image-button";
+    button.type = "button";
+    button.setAttribute("aria-label", `${SITE_CONTENT.ui?.viewLabelPrefix || "查看"} ${work.title}`);
+    const image = document.createElement("img");
+    image.src = encodeURI(work.src);
+    image.alt = work.title;
+    image.loading = "lazy";
+    button.append(image);
+    button.addEventListener("click", () => {
+      state.designLightboxReturn = {
+        group,
+        groupWorks,
+        scrollTop: gallery.scrollTop,
+      };
+      openMediaLightbox(work, { returnToDesignGroup: state.designLightboxReturn });
+    });
+    figure.append(button);
+    grid.append(figure);
+  });
+
+  gallery.append(grid);
+  state.mediaLightboxStage.append(gallery);
+  state.mediaLightbox.classList.add("is-visible");
+  state.mediaLightbox.setAttribute("aria-hidden", "false");
 }
 
 function closeMediaLightbox() {
   if (!state.mediaLightbox || !state.mediaLightboxStage) { return; }
   const hadVideo = Boolean(state.mediaLightboxStage.querySelector("video"));
+  const designReturn = state.designLightboxReturn;
+  if (designReturn && !hadVideo) {
+    state.designLightboxReturn = null;
+    openDesignGroupLightbox(designReturn.group, designReturn.groupWorks);
+    const restoredGallery = state.mediaLightboxStage.querySelector(".design-lightbox-gallery");
+    if (restoredGallery) {
+      restoredGallery.scrollTop = designReturn.scrollTop || 0;
+    }
+    return;
+  }
   state.mediaLightbox.classList.remove("is-visible");
   state.mediaLightbox.setAttribute("aria-hidden", "true");
   state.mediaLightboxStage.replaceChildren();
+  state.designLightboxReturn = null;
   if (hadVideo) {
     resumeBackgroundMusicAfterVideo();
   }

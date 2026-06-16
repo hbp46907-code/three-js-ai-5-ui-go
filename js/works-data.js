@@ -2,128 +2,208 @@ window.WORKS_MANIFEST = {
   "Design": [
     {
       "type": "image",
-      "title": "1抖音石头",
-      "src": "works/Design/1抖音石头.jpeg",
+      "title": "1-1冰淇淋抖音",
+      "src": "works/Design/1-1冰淇淋抖音.jpeg",
+      "layout": "portrait",
+      "width": 1792,
+      "height": 2400
+    },
+    {
+      "type": "image",
+      "title": "1-2熔岩抖音",
+      "src": "works/Design/1-2熔岩抖音.jpeg",
       "layout": "portrait",
       "width": 896,
       "height": 1200
     },
     {
       "type": "image",
-      "title": "2熔岩抖音",
-      "src": "works/Design/2熔岩抖音.jpeg",
+      "title": "1-3抖音石头",
+      "src": "works/Design/1-3抖音石头.jpeg",
       "layout": "portrait",
       "width": 896,
       "height": 1200
     },
     {
       "type": "image",
-      "title": "3冰淇淋抖音",
-      "src": "works/Design/3冰淇淋抖音.jpeg",
-      "layout": "portrait",
-      "width": 1792,
-      "height": 2400
-    },
-    {
-      "type": "image",
-      "title": "4面",
-      "src": "works/Design/4面.jpeg",
-      "layout": "portrait",
-      "width": 1792,
-      "height": 2400
-    },
-    {
-      "type": "image",
-      "title": "5肉",
-      "src": "works/Design/5肉.jpeg",
-      "layout": "portrait",
-      "width": 1792,
-      "height": 2400
-    },
-    {
-      "type": "image",
-      "title": "6lulu",
-      "src": "works/Design/6lulu.jpeg",
-      "layout": "portrait",
-      "width": 1792,
-      "height": 2400
-    },
-    {
-      "type": "image",
-      "title": "7LV",
-      "src": "works/Design/7LV.jpeg",
+      "title": "1-4LV",
+      "src": "works/Design/1-4LV.jpeg",
       "layout": "portrait",
       "width": 896,
       "height": 1200
     },
     {
       "type": "image",
-      "title": "8瑞幸",
-      "src": "works/Design/8瑞幸.jpeg",
+      "title": "1-5面",
+      "src": "works/Design/1-5面.jpeg",
       "layout": "portrait",
       "width": 1792,
       "height": 2400
     },
     {
       "type": "image",
-      "title": "9小FILA",
-      "src": "works/Design/9小FILA.jpeg",
+      "title": "1-6肉",
+      "src": "works/Design/1-6肉.jpeg",
+      "layout": "portrait",
+      "width": 1792,
+      "height": 2400
+    },
+    {
+      "type": "image",
+      "title": "1-7lulu",
+      "src": "works/Design/1-7lulu.jpeg",
+      "layout": "portrait",
+      "width": 1792,
+      "height": 2400
+    },
+    {
+      "type": "image",
+      "title": "1-8小FILA",
+      "src": "works/Design/1-8小FILA.jpeg",
       "layout": "portrait",
       "width": 896,
       "height": 1200
     },
     {
       "type": "image",
-      "title": "12图标",
-      "src": "works/Design/12图标.png",
-      "layout": "portrait",
-      "width": 1086,
-      "height": 1448
-    },
-    {
-      "type": "image",
-      "title": "13",
-      "src": "works/Design/13.png",
+      "title": "2-1",
+      "src": "works/Design/2-1.png",
       "layout": "portrait",
       "width": 1024,
       "height": 1536
     },
     {
       "type": "image",
-      "title": "14",
-      "src": "works/Design/14.png",
+      "title": "2-2",
+      "src": "works/Design/2-2.png",
       "layout": "portrait",
       "width": 1024,
       "height": 1536
     },
     {
       "type": "image",
-      "title": "15京剧熊猫",
-      "src": "works/Design/15京剧熊猫.png",
+      "title": "2-3京剧熊猫",
+      "src": "works/Design/2-3京剧熊猫.png",
       "layout": "portrait",
       "width": 1024,
       "height": 1536
     },
     {
       "type": "image",
-      "title": "16.1",
-      "src": "works/Design/16.1.png",
+      "title": "2-4",
+      "src": "works/Design/2-4.png",
       "layout": "portrait",
       "width": 941,
       "height": 1672
     },
     {
       "type": "image",
-      "title": "16.2",
-      "src": "works/Design/16.2.png",
+      "title": "2-5",
+      "src": "works/Design/2-5.png",
       "layout": "portrait",
       "width": 941,
       "height": 1672
     },
     {
       "type": "image",
-      "title": "17",
-      "src": "works/Design/17.png",
+      "title": "2-6",
+      "src": "works/Design/2-6.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "3-1",
+      "src": "works/Design/3-1.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "3-2",
+      "src": "works/Design/3-2.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "3-3",
+      "src": "works/Design/3-3.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "3-4",
+      "src": "works/Design/3-4.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-1",
+      "src": "works/Design/4-1.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-2",
+      "src": "works/Design/4-2.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-3",
+      "src": "works/Design/4-3.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-4",
+      "src": "works/Design/4-4.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-5",
+      "src": "works/Design/4-5.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-6",
+      "src": "works/Design/4-6.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-7",
+      "src": "works/Design/4-7.png",
+      "layout": "portrait",
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "type": "image",
+      "title": "4-8",
+      "src": "works/Design/4-8.png",
       "layout": "portrait",
       "width": 941,
       "height": 1672
@@ -196,35 +276,35 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "image",
-      "title": "7杜宾",
-      "src": "works/Photograph/7杜宾.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
       "title": "8咖啡",
       "src": "works/Photograph/8咖啡.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "9硬汉",
-      "src": "works/Photograph/9硬汉.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
       "title": "10街边阳光",
       "src": "works/Photograph/10街边阳光.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "width": 1086,
+      "height": 1449
+    },
+    {
+      "type": "image",
+      "title": "11",
+      "src": "works/Photograph/11.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "type": "image",
+      "title": "12",
+      "src": "works/Photograph/12.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448
     }
   ],
   "Poster": [
@@ -318,27 +398,11 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "image",
-      "title": "1-3-1",
-      "src": "works/Poster/1-3-1.png",
+      "title": "1-2-6",
+      "src": "works/Poster/1-2-6.png",
       "layout": "portrait",
-      "width": 1086,
-      "height": 1448
-    },
-    {
-      "type": "image",
-      "title": "1-3-2",
-      "src": "works/Poster/1-3-2.png",
-      "layout": "portrait",
-      "width": 1086,
-      "height": 1448
-    },
-    {
-      "type": "image",
-      "title": "1-3-3",
-      "src": "works/Poster/1-3-3.png",
-      "layout": "portrait",
-      "width": 1086,
-      "height": 1448
+      "width": 941,
+      "height": 1672
     },
     {
       "type": "image",
@@ -409,8 +473,8 @@ window.WORKS_MANIFEST = {
       "title": "2-2-3",
       "src": "works/Poster/2-2-3.png",
       "layout": "portrait",
-      "width": 1068,
-      "height": 1472
+      "width": 940,
+      "height": 1672
     },
     {
       "type": "image",
@@ -944,35 +1008,43 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "image",
-      "title": "7杜宾",
-      "src": "works/Qiu/7杜宾.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
       "title": "8咖啡",
       "src": "works/Qiu/8咖啡.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "9硬汉",
-      "src": "works/Qiu/9硬汉.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
       "title": "10街边阳光",
       "src": "works/Qiu/10街边阳光.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "width": 1086,
+      "height": 1449
+    },
+    {
+      "type": "image",
+      "title": "11",
+      "src": "works/Qiu/11.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "type": "image",
+      "title": "12",
+      "src": "works/Qiu/12.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "type": "image",
+      "title": "13",
+      "src": "works/Qiu/13.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448
     }
   ],
   "QIU": [
@@ -1050,39 +1122,48 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "image",
-      "title": "7杜宾",
-      "src": "works/Qiu/7杜宾.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672,
-      "sphereSrc": "assets/qiu-sphere/qiu-009.png"
-    },
-    {
-      "type": "image",
       "title": "8咖啡",
       "src": "works/Qiu/8咖啡.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672,
-      "sphereSrc": "assets/qiu-sphere/qiu-010.png"
-    },
-    {
-      "type": "image",
-      "title": "9硬汉",
-      "src": "works/Qiu/9硬汉.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672,
-      "sphereSrc": "assets/qiu-sphere/qiu-011.png"
+      "width": 1086,
+      "height": 1448,
+      "sphereSrc": "assets/qiu-sphere/qiu-009.png"
     },
     {
       "type": "image",
       "title": "10街边阳光",
       "src": "works/Qiu/10街边阳光.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672,
+      "width": 1086,
+      "height": 1449,
+      "sphereSrc": "assets/qiu-sphere/qiu-010.png"
+    },
+    {
+      "type": "image",
+      "title": "11",
+      "src": "works/Qiu/11.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448,
+      "sphereSrc": "assets/qiu-sphere/qiu-011.png"
+    },
+    {
+      "type": "image",
+      "title": "12",
+      "src": "works/Qiu/12.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448,
       "sphereSrc": "assets/qiu-sphere/qiu-012.png"
+    },
+    {
+      "type": "image",
+      "title": "13",
+      "src": "works/Qiu/13.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448,
+      "sphereSrc": "assets/qiu-sphere/qiu-013.png"
     }
   ]
 }
