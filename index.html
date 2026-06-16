@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Galaxy - Phase Three</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        overflow-x: hidden;
+        background: #000 url("./work-beijing.png") center center / 100% 100% fixed no-repeat;
+        color: #eef8ff;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      body {
+        cursor: none;
+      }
+
+      .app-shell {
+        position: relative;
+        width: 100%;
+        min-height: 210vh;
+        isolation: isolate;
+      }
+
+      #space-canvas {
+        position: fixed;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .stage-hint {
+        position: absolute;
+        left: 50%;
+        bottom: 2rem;
+        z-index: 2;
+        margin: 0;
+        transform: translateX(-50%);
+        color: rgba(220, 235, 255, 0.46);
+      }
+
+      .black-hole-cursor,
+      .overlay-ui,
+      .portfolio-detail-page,
+      .media-lightbox {
+        position: relative;
+        z-index: 3;
+      }
+
+      .portfolio-title,
+      .return-arrow,
+      .portfolio-detail-page,
+      .media-lightbox {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .rocket-button img,
+      .return-arrow img {
+        max-width: 100%;
+        display: block;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- WebGL 画布与 HTML UI 分层管理，后续阶段可继续向 app-shell 接入球形 UI。 -->
+    <main class="app-shell" aria-label="AI 图片与视频展示首页第三阶段">
+      <canvas id="space-canvas" aria-label="深色宇宙背景中的 AI 光圈与银河粒子动画"></canvas>
+      <audio id="background-music" src="./works-BGM.mp3" preload="auto" loop></audio>
+      <!-- 当前提示只在 AI 光圈待点击时出现。 -->
+      <p class="stage-hint" aria-hidden="true">Click AI</p>
+      <!-- 鼠标黑洞指针：不接收事件，只负责视觉；点击仍由下方 canvas 和按钮处理。 -->
+      <div class="black-hole-cursor" data-black-hole-cursor aria-hidden="true"></div>
+
+      <!--
+        第三阶段 UI 覆盖层：
+        标题与按钮交给 HTML/CSS，粒子和银河运动仍由 Three.js 控制。
+        第四阶段球形 UI 预留位置：可在 overlay-ui 内增加独立的 sphere-nav 容器。
+      -->
+      <section class="overlay-ui" aria-live="polite">
+        <div class="portfolio-title" data-portfolio-title aria-hidden="true">
+          <p class="title-line title-owner">韩宝鹏的</p>
+          <p class="title-line title-work">AIGC作品集</p>
+          <div class="explore-row">
+            <p class="title-line title-explore">探索</p>
+            <button class="rocket-button" data-rocket-button type="button" aria-label="探索作品集">
+              <img src="./assets/rocket-mask.png" alt="" />
+            </button>
+          </div>
+
+          <section class="resume-panel" aria-label="个人简历展示区域">
+            <div class="resume-profile">
+              <img class="resume-photo" src="./work-myself.png" alt="韩宝鹏个人照片" />
+              <div class="resume-contact">
+                <p>TEL:13269608136</p>
+                <p>EMAIL：hbp46907@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="resume-copy">
+              <h2>韩宝鹏 Baopeng</h2>
+              <p class="resume-role">Visual designer/Video production/PM</p>
+              <p>长期关注 AIGC 视觉叙事、品牌影像和数字内容体验设计。</p>
+              <p>擅长将视觉概念拆解为可执行的镜头、界面和交互方案。</p>
+              <p>熟悉从创意脚本、分镜规划到后期包装的完整制作流程。</p>
+              <p>具备视频制作、视觉设计、项目统筹和跨团队沟通经验。</p>
+              <p>能够使用生成式工具快速建立风格方向与高质量视觉草案。</p>
+              <p>重视作品集首页的沉浸感、节奏感和信息呈现效率。</p>
+              <p>在项目中关注用户第一眼的情绪反馈与继续探索的动机。</p>
+              <p>善于把复杂想法转化为清晰、可迭代、可落地的设计语言。</p>
+              <p>熟悉短视频、宣传片、活动视觉和数字展陈相关内容制作。</p>
+              <p>希望通过 AIGC 提升创作效率，同时保持人的审美判断。</p>
+              <p>后续可继续补充项目经历、代表作品、软件能力和获奖信息。</p>
+              <p>这一段先作为占位文案，方便后期继续调整个人简介内容。</p>
+            </div>
+          </section>
+
+          <section class="work-experience-panel" data-work-experience aria-label="工作经历">
+            <h3>工作经历</h3>
+            <p>这里可填写工作经历、项目职责、团队协作和代表成果。</p>
+          </section>
+        </div>
+
+        <section class="closing-contact-panel" aria-label="联系我">
+          <div class="closing-contact-copy">
+            <p class="closing-contact-title">未来已来</p>
+            <p class="closing-contact-title">联系我，让我们开始创作</p>
+            <p class="closing-contact-info">TEL:13269608136&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAIL:hannbaoopengg@163.com</p>
+          </div>
+          <div class="closing-contact-qr">
+            <img src="./assets/wechat-qr.png" alt="微信二维码" />
+            <p>扫一扫，添加微信</p>
+          </div>
+        </section>
+
+        <button class="return-arrow" data-return-arrow type="button" aria-label="返回标题界面">
+          <img src="./assets/return-arrow-ui.png" alt="" />
+        </button>
+      </section>
+
+      <section class="portfolio-detail-page" data-detail-page aria-hidden="true">
+        <button class="detail-back-button" data-detail-back type="button" aria-label="返回银河菜单">‹ BACK</button>
+        <header class="detail-header">
+          <p class="detail-kicker">AIGC PORTFOLIO</p>
+          <h1 data-detail-title>Project</h1>
+        </header>
+        <div class="works-gallery" data-works-gallery></div>
+      </section>
+
+      <div class="media-lightbox" data-media-lightbox aria-hidden="true">
+        <button class="media-lightbox-close" data-media-lightbox-close type="button" aria-label="关闭预览">×</button>
+        <div class="media-lightbox-stage" data-media-lightbox-stage></div>
+      </div>
+    </main>
+    <script src="./js/content-data.js"></script>
+    <script src="./js/works-data.js"></script>
+    <script src="./js/icon-data.js"></script>
+    <script src="./js/boot.js"></script>
+  </body>
+</html>

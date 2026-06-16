@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "generate:works": "node scripts/generate-works-manifest.cjs",
+    "preview": "node preview-server.cjs"
+  }
+}
