@@ -558,7 +558,7 @@ body.galaxy-active .app-shell {
   position: absolute;
   inset: 0;
   content: "";
-  background: url("./5UI/kagangtuya.png") center / contain no-repeat;
+  background: url("./5UI/kagangtuya.PNG") center / contain no-repeat;
   filter:
     brightness(1.1)
     contrast(1.08)

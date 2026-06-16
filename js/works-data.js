@@ -827,22 +827,28 @@ window.WORKS_MANIFEST = {
       "height": 1528
     },
     {
-      "type": "video",
+      "type": "image",
       "title": "project01",
-      "src": "works/Project/project01.mp4",
-      "layout": "wide"
+      "src": "works/Project/project01.jpg",
+      "layout": "wide",
+      "width": 1920,
+      "height": 1080
     },
     {
-      "type": "video",
+      "type": "image",
       "title": "project02",
-      "src": "works/Project/project02.mp4",
-      "layout": "wide"
+      "src": "works/Project/project02.jpg",
+      "layout": "wide",
+      "width": 1672,
+      "height": 941
     },
     {
-      "type": "video",
+      "type": "image",
       "title": "project03",
-      "src": "works/Project/project03.mp4",
-      "layout": "wide"
+      "src": "works/Project/project03.jpg",
+      "layout": "wide",
+      "width": 1922,
+      "height": 1080
     }
   ],
   "Video": [
@@ -856,12 +862,6 @@ window.WORKS_MANIFEST = {
       "type": "video",
       "title": "2AMG GT TVC",
       "src": "works/Video/2AMG GT TVC.mp4",
-      "layout": "wide"
-    },
-    {
-      "type": "video",
-      "title": "3斯芬克斯健身猫Vlog",
-      "src": "works/Video/3斯芬克斯健身猫Vlog.mp4",
       "layout": "wide"
     },
     {

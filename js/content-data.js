@@ -204,12 +204,6 @@ window.SITE_CONTENT = {
         "hint": "可在页面内直接播放"
       },
       {
-        "category": "视频作品",
-        "title": "斯芬克斯健身猫Vlog",
-        "description": "展示健身猫下班之后健身的短视频",
-        "hint": "可在页面内直接播放"
-      },
-      {
         "category": "产品广告",
         "title": "时尚运动鞋TVC",
         "description": "展现户外运动鞋时尚、舒适、防水",
