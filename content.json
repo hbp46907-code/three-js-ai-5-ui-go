@@ -143,7 +143,7 @@
           },
           {
             "title": "分镜设计",
-            "description": "用ChatGPT或者MJ把文字脚本转为镜头画面，确定景别、运动方式和关键视觉转场，给关键角色做三视图和场景9宫格或者全景图保持人物场景一致性，打斗复杂画面做黑白火火柴人线稿更好控制人物动作。"
+            "description": "用ChatGPT或者MJ把文字脚本转为镜头画面，确定景别、运动方式和关键视觉转场，给关键角色做三视图和场景9宫格或者全景图保持人物场景一致性。"
           },
           {
             "title": "素材收集",
@@ -156,6 +156,66 @@
         ],
         "poster": "works/Project/project03.jpg",
         "url": "https://www.bilibili.com/video/BV13vjT6nEfz/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
+      },
+      {
+        "title": "  ",
+        "duration": "1:27",
+        "style": "美妆TVC",
+        "tools": "LibTV/Midjourney/Nano banana/Seedance2.0 / Kling / 剪映",
+        "steps": [
+          {
+            "title": "概念发想 & 创意方向",
+            "description": "文生图，用Midjourney生成人物以及唇彩图片，对人物进行高清放大。"
+          },
+          {
+            "title": "脚本写作",
+            "description": " 全流程用LibTV生成。"
+          },
+          {
+            "title": "分镜设计",
+            "description": "生成人物拿着产品图片、分镜图和一些关键画面图片"
+          },
+          {
+            "title": "素材收集",
+            "description": "用Kling或者Seedance生成视频，用可灵对真人把控会好一些，限制宽泛一些"
+          },
+          {
+            "title": "后期制作（剪辑、调色、音效、动效）",
+            "description": "使用剪映完成剪辑节奏和声音设计"
+          }
+        ],
+        "poster": "works/Project/Project04.jpg",
+        "url": "https://www.bilibili.com/video/BV1k8LR6NE9V/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
+      },
+      {
+        "title": "  ",
+        "duration": "3:11",
+        "style": "真人短片/ 时光穿越",
+        "tools": "LibTV/Midjourney/ Seedance2.0 / Kling / Photoshop / 剪映",
+        "steps": [
+          {
+            "title": "概念发想 & 创意方向",
+            "description": "成年打工人的不易，因为喝了时光咖啡时光倒流穿越回以前"
+          },
+          {
+            "title": "脚本写作",
+            "description": "全流程LibTV制作更方便"
+          },
+          {
+            "title": "分镜设计",
+            "description": "在LibTV里面同样要制作人物三视图和场景图控制人物场景一致性，然后组合生成分镜图"
+          },
+          {
+            "title": "素材收集",
+            "description": "在LibTV里选择Seedance2.0模型生成视频"
+          },
+          {
+            "title": "后期制作（剪辑、调色、音效、动效）",
+            "description": "使用剪映完成剪辑等操作"
+          }
+        ],
+        "poster": "works/Project/Project05.jpg",
+        "url": "https://www.bilibili.com/video/BV1whLR6vEm6/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
       }
     ],
     "metaLabels": {
@@ -206,14 +266,26 @@
       {
         "category": "产品广告",
         "title": "时尚运动鞋TVC",
-        "description": "展现户外运动鞋时尚、舒适、防水",
+        "description": "展现户外运动鞋时尚、舒适、防水的功能特性",
         "hint": "可在页面内直接播放"
       },
       {
         "category": "产品广告",
-        "title": "G-SHOCK户外运动手表TVC",
-        "description": "G-SHOCK大泥王系列户外手表，防摔、防水、防尘、实时电波校时、主动+被动亮光",
+        "title": "印派男士洗面奶TVC",
+        "description": "去油祛痘印，深度清洁毛孔，清爽不紧绷，男士首选面部清洁洁面膏",
         "hint": "可在页面内直接播放"
+      },
+      {
+        "category": "产品广告",
+        "title": "高山野生蜂蜜TVC",
+        "description": "高海拔孕育原生蜜源，历经四季沉淀，浓稠纯净，营养健康",
+        "hint": "点击封面跳转播放"
+      },
+      {
+        "category": "产品广告",
+        "title": "小米电视TVC",
+        "description": "小米电视适配不同场景，给人温馨家庭的感觉，真实场景让人身临其境。",
+        "hint": "点击封面跳转播放"
       }
     ]
   },

@@ -1440,6 +1440,7 @@ function updateQiuPhotoSphere(elapsed) {
   }
 
   state.qiuAxisGroup.position.lerp(getQiuSphereScreenPosition(), 0.08);
+  state.qiuAxisGroup.scale.setScalar(window.innerWidth <= 640 ? CONFIG.qiuDisplayScale * 0.72 : CONFIG.qiuDisplayScale);
   state.qiuScrollBoost *= CONFIG.qiuScrollBoostDecay;
   if (state.qiuScrollBoost < 0.00002) {
     state.qiuScrollBoost = 0;
@@ -2298,13 +2299,22 @@ function createWorkCard(work, { isVideoCategory = false, workIndex = 0, ui = {} 
     card.setAttribute("aria-label", `${ui.viewLabelPrefix || "查看"} ${work.title}`);
   }
 
-  const mediaFrame = document.createElement("span");
+  const isExternalVideo = isVideoCategory && work.type === "video" && Boolean(work.url);
+  const mediaFrame = document.createElement(isExternalVideo ? "button" : "span");
   mediaFrame.className = "work-media-frame";
+  if (isExternalVideo) {
+    mediaFrame.classList.add("video-link-cover");
+    mediaFrame.type = "button";
+    mediaFrame.setAttribute("aria-label", `${ui.playLabelPrefix || "播放"} ${work.title}`);
+    mediaFrame.addEventListener("click", () => {
+      window.open(work.url, "_blank", "noopener,noreferrer");
+    });
+  }
 
-  const media = document.createElement(work.type === "video" ? "video" : "img");
-  media.src = encodeURI(work.src);
+  const media = document.createElement(work.type === "video" && !isExternalVideo ? "video" : "img");
+  media.src = encodeURI(isExternalVideo ? (work.poster || work.src) : work.src);
   media.loading = "lazy";
-  if (work.type === "video") {
+  if (work.type === "video" && !isExternalVideo) {
     media.muted = !isVideoCategory;
     media.loop = !isVideoCategory;
     media.playsInline = true;
@@ -2315,7 +2325,11 @@ function createWorkCard(work, { isVideoCategory = false, workIndex = 0, ui = {} 
     media.addEventListener("loadedmetadata", () => classifyMediaCard(card, media.videoWidth, media.videoHeight));
   } else {
     media.alt = work.title;
-    media.addEventListener("load", () => classifyMediaCard(card, media.naturalWidth, media.naturalHeight));
+    if (isExternalVideo) {
+      card.classList.add("is-wide");
+    } else {
+      media.addEventListener("load", () => classifyMediaCard(card, media.naturalWidth, media.naturalHeight));
+    }
   }
 
   mediaFrame.append(media);
@@ -2447,6 +2461,7 @@ function renderProjectProcessPage() {
 
 function createProjectTimeline(projectIndex, project = {}) {
   const steps = project.steps || SITE_CONTENT.projectPage?.steps || [];
+  const processImages = getProjectProcessImages(projectIndex);
 
   const timeline = document.createElement("ol");
   timeline.className = "project-timeline";
@@ -2461,18 +2476,27 @@ function createProjectTimeline(projectIndex, project = {}) {
 
     const images = document.createElement("div");
     images.className = "project-step-images";
-    for (let imageIndex = 0; imageIndex < 3; imageIndex += 1) {
+    const stepImages = processImages.filter((work) => work.projectStep === stepIndex + 1);
+    const imageSlots = stepImages.length
+      ? stepImages
+      : Array.from({ length: 3 }, (_, imageIndex) => ({
+        src: getProjectProcessImageSrc(projectIndex, stepIndex, imageIndex),
+        title: formatProjectTemplate(SITE_CONTENT.projectPage?.processImageAltTemplate || "流程图片 {project}-{step}-{image}", projectIndex, stepIndex, imageIndex),
+        isPlaceholder: true,
+      }));
+
+    imageSlots.forEach((imageWork, imageIndex) => {
       const imageButton = document.createElement("button");
       imageButton.className = "project-step-image";
       imageButton.type = "button";
-      const imageSrc = getProjectProcessImageSrc(projectIndex, stepIndex, imageIndex);
+      const imageSrc = imageWork.src;
       imageButton.innerHTML = `<img src="${encodeURI(imageSrc)}" alt="" loading="lazy"><span>${stepIndex + 1}.${imageIndex + 1}</span>`;
       imageButton.querySelector("img")?.addEventListener("error", () => {
         imageButton.classList.add("is-missing");
       }, { once: true });
-      imageButton.addEventListener("click", () => openProjectProcessImage(projectIndex, stepIndex, imageIndex));
+      imageButton.addEventListener("click", () => openProjectProcessImage(projectIndex, stepIndex, imageIndex, imageWork));
       images.append(imageButton);
-    }
+    });
 
     item.append(copy, images);
     timeline.append(item);
@@ -2491,6 +2515,30 @@ function getProjectVideoSrc(project, projectIndex) {
 
 function getProjectProcessImageSrc(projectIndex, stepIndex, imageIndex) {
   return `${PROJECT_ASSET_ROOT}/${projectIndex + 1}-${stepIndex + 1}-${imageIndex + 1}.png`;
+}
+
+function getProjectProcessImages(projectIndex) {
+  const projectNumber = projectIndex + 1;
+  return [...(worksLibrary.Project || [])]
+    .map((work) => {
+      const fileName = decodeURIComponent(work.src || work.title || "")
+        .split(/[\\/]/)
+        .pop() || "";
+      const stem = fileName.replace(/\.[^.]+$/, "").trim();
+      const match = stem.match(/^(\d+)-(?:(\d+)-)?(\d+)?$/);
+      if (!match || Number(match[1]) !== projectNumber) { return null; }
+      return {
+        ...work,
+        projectStep: Number(match[2] || 1),
+        projectImageOrder: Number(match[3] || 1),
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => (
+      a.projectStep - b.projectStep
+      || a.projectImageOrder - b.projectImageOrder
+      || a.title.localeCompare(b.title, "zh-CN", { numeric: true, sensitivity: "base" })
+    ));
 }
 
 function formatProjectTemplate(template, projectIndex, stepIndex, imageIndex) {
@@ -2541,14 +2589,14 @@ function showProjectPlaceholder(title, text) {
   state.mediaLightbox.setAttribute("aria-hidden", "false");
 }
 
-function openProjectProcessImage(projectIndex, stepIndex, imageIndex) {
+function openProjectProcessImage(projectIndex, stepIndex, imageIndex, imageWork = null) {
   if (!state.mediaLightbox || !state.mediaLightboxStage) { return; }
   state.mediaLightboxStage.replaceChildren();
-  const imageSrc = getProjectProcessImageSrc(projectIndex, stepIndex, imageIndex);
+  const imageSrc = imageWork?.src || getProjectProcessImageSrc(projectIndex, stepIndex, imageIndex);
   const projectPage = SITE_CONTENT.projectPage || {};
   const image = document.createElement("img");
   image.src = encodeURI(imageSrc);
-  image.alt = formatProjectTemplate(projectPage.processImageAltTemplate || "流程图片 {project}-{step}-{image}", projectIndex, stepIndex, imageIndex);
+  image.alt = imageWork?.title || formatProjectTemplate(projectPage.processImageAltTemplate || "流程图片 {project}-{step}-{image}", projectIndex, stepIndex, imageIndex);
   image.addEventListener("error", () => {
     const placeholderTitle = formatProjectTemplate(projectPage.processImagePlaceholderTemplate || "流程图片占位 {project}-{step}-{image}", projectIndex, stepIndex, imageIndex);
     showProjectPlaceholder(placeholderTitle, projectPage.emptyImageText || "");
@@ -2744,6 +2792,11 @@ function getQiuLayerViewport() {
     球体在自己的视口中心附近，因此不会受到主相机画面边缘透视畸变影响。
     视口固定在右上角；页面滚动只临时加速照片球自转，不再移动视口位置。
   */
+  if (window.innerWidth <= 640) {
+    const width = window.innerWidth;
+    const height = Math.round(window.innerHeight * 0.42);
+    return { x: 0, y: 0, width, height };
+  }
   const width = Math.round(window.innerWidth * CONFIG.qiuViewportWidthRatio);
   const height = Math.round(window.innerHeight * CONFIG.qiuViewportHeightRatio);
   const x = Math.round(window.innerWidth - width - window.innerWidth * CONFIG.qiuViewportRightRatio);
