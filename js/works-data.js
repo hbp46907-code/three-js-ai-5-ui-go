@@ -69,48 +69,64 @@ window.WORKS_MANIFEST = {
       "title": "2-1",
       "src": "works/Design/2-1.png",
       "layout": "portrait",
-      "width": 1024,
-      "height": 1536
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
       "title": "2-2",
       "src": "works/Design/2-2.png",
       "layout": "portrait",
-      "width": 1024,
-      "height": 1536
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
-      "title": "2-3京剧熊猫",
-      "src": "works/Design/2-3京剧熊猫.png",
+      "title": "2-3",
+      "src": "works/Design/2-3.png",
       "layout": "portrait",
-      "width": 1024,
-      "height": 1536
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
       "title": "2-4",
       "src": "works/Design/2-4.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
       "title": "2-5",
       "src": "works/Design/2-5.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
       "title": "2-6",
       "src": "works/Design/2-6.png",
       "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "type": "image",
+      "title": "2-7",
+      "src": "works/Design/2-7.png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "type": "image",
+      "title": "2-8 ",
+      "src": "works/Design/2-8 .png",
+      "layout": "portrait",
+      "width": 1086,
+      "height": 1448
     },
     {
       "type": "image",
@@ -844,107 +860,83 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "image",
-      "title": "3-2-1",
-      "src": "works/Project/3-2-1.png",
-      "layout": "wide",
-      "width": 2207,
-      "height": 1422
-    },
-    {
-      "type": "image",
       "title": "3-3-1",
       "src": "works/Project/3-3-1.png",
-      "layout": "wide",
-      "width": 1408,
-      "height": 573
+      "layout": "portrait",
+      "width": 962,
+      "height": 1080
     },
     {
       "type": "image",
       "title": "3-3-2",
       "src": "works/Project/3-3-2.png",
       "layout": "portrait",
-      "width": 1408,
-      "height": 2818
+      "width": 962,
+      "height": 1080
     },
     {
       "type": "image",
       "title": "3-3-3",
       "src": "works/Project/3-3-3.png",
       "layout": "portrait",
-      "width": 1254,
-      "height": 1254
+      "width": 962,
+      "height": 1080
     },
     {
       "type": "image",
-      "title": "3-3-4",
-      "src": "works/Project/3-3-4.png",
+      "title": "3-4-1",
+      "src": "works/Project/3-4-1.png",
       "layout": "portrait",
-      "width": 1254,
-      "height": 1254
+      "width": 1199,
+      "height": 897
     },
     {
       "type": "image",
-      "title": "3-5-1",
-      "src": "works/Project/3-5-1.png",
-      "layout": "wide",
-      "width": 2560,
-      "height": 1528
+      "title": "3-4-2",
+      "src": "works/Project/3-4-2.png",
+      "layout": "portrait",
+      "width": 1198,
+      "height": 898
     },
     {
       "type": "image",
-      "title": "4-1-1",
-      "src": "works/Project/4-1-1.png",
-      "layout": "wide",
-      "width": 1185,
-      "height": 758
-    },
-    {
-      "type": "image",
-      "title": "4-1-2",
-      "src": "works/Project/4-1-2.png",
-      "layout": "wide",
-      "width": 1047,
-      "height": 665
+      "title": "3-4-3",
+      "src": "works/Project/3-4-3.png",
+      "layout": "portrait",
+      "width": 1194,
+      "height": 901
     },
     {
       "type": "image",
       "title": "4-2-1",
       "src": "works/Project/4-2-1.png",
       "layout": "wide",
-      "width": 1987,
-      "height": 1194
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "type": "image",
+      "title": "4-3-1",
+      "src": "works/Project/4-3-1.png",
+      "layout": "wide",
+      "width": 2048,
+      "height": 1152
     },
     {
       "type": "image",
       "title": "4-3-2",
       "src": "works/Project/4-3-2.png",
       "layout": "wide",
-      "width": 1014,
-      "height": 658
+      "width": 2048,
+      "height": 1152
     },
     {
       "type": "image",
-      "title": "4-4-1",
-      "src": "works/Project/4-4-1.png",
-      "layout": "portrait",
-      "width": 1195,
-      "height": 897
-    },
-    {
-      "type": "image",
-      "title": "4-4-2",
-      "src": "works/Project/4-4-2.png",
-      "layout": "portrait",
-      "width": 1193,
-      "height": 905
-    },
-    {
-      "type": "image",
-      "title": "4-5-1",
-      "src": "works/Project/4-5-1.png",
+      "title": "4-3-3",
+      "src": "works/Project/4-3-3.png",
       "layout": "wide",
-      "width": 2540,
-      "height": 1497
+      "width": 2048,
+      "height": 1152
     },
     {
       "type": "image",
@@ -1020,11 +1012,11 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "image",
-      "title": "project03",
-      "src": "works/Project/project03.jpg",
+      "title": "Project03",
+      "src": "works/Project/Project03.jpg",
       "layout": "wide",
-      "width": 1922,
-      "height": 1080
+      "width": 2560,
+      "height": 1440
     },
     {
       "type": "image",
@@ -1058,9 +1050,13 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "video",
-      "title": "4运动鞋 TVC",
-      "src": "works/Video/4运动鞋 TVC.mp4",
-      "layout": "wide"
+      "title": "唇釉TVC",
+      "src": "works/Video/3唇釉TVC.jpg",
+      "poster": "works/Video/3唇釉TVC.jpg",
+      "url": "https://www.bilibili.com/video/BV1k8LR6NE9V/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a",
+      "layout": "wide",
+      "width": 2560,
+      "height": 1440
     },
     {
       "type": "video",
@@ -1075,8 +1071,8 @@ window.WORKS_MANIFEST = {
       "poster": "works/Video/蜂蜜TVC.jpg",
       "url": "https://www.bilibili.com/video/BV1kJjF67EjS/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a",
       "layout": "wide",
-      "width": 1920,
-      "height": 1080
+      "width": 2308,
+      "height": 1440
     },
     {
       "type": "video",
@@ -1085,8 +1081,8 @@ window.WORKS_MANIFEST = {
       "poster": "works/Video/小米TVC.jpg",
       "url": "https://www.bilibili.com/video/BV1pJjF67Ejx/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a",
       "layout": "wide",
-      "width": 1920,
-      "height": 1080
+      "width": 2560,
+      "height": 1440
     }
   ],
   "Qiu": [

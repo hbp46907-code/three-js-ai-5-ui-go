@@ -13,6 +13,20 @@ const browserDataPath = path.join(root, "js", "works-data.js");
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp"]);
 const VIDEO_EXTENSIONS = new Set([".mp4", ".webm", ".mov"]);
 const CATEGORY_ORDER = ["Design", "Photograph", "Poster", "Project", "Video"];
+const EXTERNAL_VIDEO_LINKS = new Map([
+  ["works/Video/3唇釉TVC.jpg", {
+    title: "唇釉TVC",
+    url: "https://www.bilibili.com/video/BV1k8LR6NE9V/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a",
+  }],
+  ["works/Video/蜂蜜TVC.jpg", {
+    title: "高山野生蜂蜜TVC",
+    url: "https://www.bilibili.com/video/BV1kJjF67EjS/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a",
+  }],
+  ["works/Video/小米TVC.jpg", {
+    title: "小米TVC",
+    url: "https://www.bilibili.com/video/BV1pJjF67Ejx/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a",
+  }],
+]);
 
 const collator = new Intl.Collator("zh-CN", {
   numeric: true,
@@ -79,12 +93,15 @@ function getLayout(type, size) {
 function createWorkEntry(filePath) {
   const extension = path.extname(filePath).toLowerCase();
   const isVideo = VIDEO_EXTENSIONS.has(extension);
-  const type = isVideo ? "video" : "image";
+  const webPath = toWebPath(filePath);
+  const externalVideo = EXTERNAL_VIDEO_LINKS.get(webPath);
+  const type = isVideo || externalVideo ? "video" : "image";
   const size = isVideo ? null : readImageSize(filePath);
   const entry = {
     type,
-    title: stripExtension(filePath),
-    src: toWebPath(filePath),
+    title: externalVideo?.title || stripExtension(filePath),
+    src: webPath,
+    ...(externalVideo ? { poster: webPath, url: externalVideo.url } : {}),
     layout: getLayout(type, size),
   };
 

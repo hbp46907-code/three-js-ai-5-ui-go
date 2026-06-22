@@ -1,13 +1,13 @@
 Update works manifest 
 ------------------------------------------------------------ 
-Time: 2026/06/18 周四 10:09:55.25 
+Time: 2026/06/21 周日 23:26:58.65 
  
 Generated works-manifest.json and js/works-data.js with 162 works.
 Current counts: 
-- Design: 26
+- Design: 28
 - Photograph: 12
 - Poster: 57
-- Project: 36
-- Video: 5
+- Project: 33
+- Video: 6
 - Qiu: 13
 - QIU: 13

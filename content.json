@@ -101,7 +101,7 @@
         "title": "  ",
         "duration": "1:07",
         "style": "萌宠Vlog",
-        "tools": "Chat GPT/Seedance2.0/Kling/Photoshop/剪映",
+        "tools": "ChatGPT/Seedance2.0/Kling/Photoshop/剪映",
         "steps": [
           {
             "title": "概念发想 & 创意方向",
@@ -129,21 +129,21 @@
       },
       {
         "title": "  ",
-        "duration": "06:06",
-        "style": "人物故事/都市怪谈悬疑",
-        "tools": "Chat GPT/Seedance2.0/Kling/Photoshop/剪映",
+        "duration": "06:39",
+        "style": "史诗奇幻 / 黑暗奇幻 / 魔幻精灵",
+        "tools": "LibTV/Midjourney/Nano banana/Seedance2.0/Kling/剪映",
         "steps": [
           {
             "title": "概念发想 & 创意方向",
-            "description": "24H便利店在凌晨以后的第13位顾客为已故的人，不能收钱听他把故事讲完，延伸到视频结尾第13位顾客收银员父亲的故事"
+            "description": "根据《权力的游戏》、《指环王》等电影风格创作，能生长金色琥珀的森林，贪欲无限的国王，森林里的精灵女王"
           },
           {
             "title": "脚本写作",
             "description": "将想法和大概故事剧情发展发给GPT让他润色故事细节和出剧情分镜脚本，再根据实际情况自己删减。"
           },
           {
-            "title": "分镜设计",
-            "description": "用ChatGPT或者MJ把文字脚本转为镜头画面，确定景别、运动方式和关键视觉转场，给关键角色做三视图和场景9宫格或者全景图保持人物场景一致性。"
+            "title": "角色三视图设计",
+            "description": "用ChatGPT或者MJ把文字脚本转为镜头画面，给角色做三视图保持人物一致性，场景为森林不用做场景三视图保持画面风格一致即可。"
           },
           {
             "title": "素材收集",
@@ -155,37 +155,37 @@
           }
         ],
         "poster": "works/Project/project03.jpg",
-        "url": "https://www.bilibili.com/video/BV13vjT6nEfz/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
+        "url": "https://www.bilibili.com/video/BV1Nfjw6bEiR/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
       },
       {
         "title": "  ",
-        "duration": "1:27",
-        "style": "美妆TVC",
-        "tools": "LibTV/Midjourney/Nano banana/Seedance2.0 / Kling / 剪映",
+        "duration": "2:42",
+        "style": "恐怖/悬疑",
+        "tools": "LibTV/Midjourney/Nanobanana/Seedance2.0/Kling/剪映",
         "steps": [
           {
             "title": "概念发想 & 创意方向",
-            "description": "文生图，用Midjourney生成人物以及唇彩图片，对人物进行高清放大。"
+            "description": "根据民宿小说创作，黄河不只是河，它是一条埋葬秘密、债命与怨魂的活物。捞尸人捞上来的不是尸体，而是一段不该重见天日的旧案。去除女子阴债，为清白女子引渡元阴"
           },
           {
-            "title": "脚本写作",
-            "description": " 全流程用LibTV生成。"
+            "title": "角色三视图、场景、物品设计",
+            "description": "  "
           },
           {
             "title": "分镜设计",
-            "description": "生成人物拿着产品图片、分镜图和一些关键画面图片"
+            "description": "生成分镜图和一些关键画面图片"
           },
           {
             "title": "素材收集",
             "description": "用Kling或者Seedance生成视频，用可灵对真人把控会好一些，限制宽泛一些"
           },
           {
-            "title": "后期制作（剪辑、调色、音效、动效）",
-            "description": "使用剪映完成剪辑节奏和声音设计"
+            "title": "后期制作",
+            "description": "使用剪映完成剪辑"
           }
         ],
         "poster": "works/Project/Project04.jpg",
-        "url": "https://www.bilibili.com/video/BV1k8LR6NE9V/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
+        "url": "https://www.bilibili.com/video/BV1dfjA67E8G/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
       },
       {
         "title": "  ",
@@ -265,15 +265,15 @@
       },
       {
         "category": "产品广告",
-        "title": "时尚运动鞋TVC",
-        "description": "展现户外运动鞋时尚、舒适、防水的功能特性",
+        "title": "印派男士洗面奶TVC",
+        "description": "展去油祛痘印，深度清洁毛孔，清爽不紧绷，男士首选面部清洁洁面膏",
         "hint": "可在页面内直接播放"
       },
       {
         "category": "产品广告",
-        "title": "印派男士洗面奶TVC",
-        "description": "去油祛痘印，深度清洁毛孔，清爽不紧绷，男士首选面部清洁洁面膏",
-        "hint": "可在页面内直接播放"
+        "title": "唇釉TVC",
+        "description": "一抹显色，吻住高级感，水润不拔干，轻盈不黏腻，高饱和显色",
+        "hint": "点击封面跳转播放"
       },
       {
         "category": "产品广告",
