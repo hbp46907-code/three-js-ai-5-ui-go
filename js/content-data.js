@@ -30,8 +30,8 @@ window.SITE_CONTENT = {
     "experience": {
       "title": "工作经历",
       "items": [
-        "北京之南视觉文化传媒有限公司/AIGC创作设计师　　　　　2023.11-2026.06",
-        "负责AI视觉内容创作与商业设计落地，参与多类型AIGC项目的视觉方案制作，包括电商、电影的人物海报，品牌KV、人物写真、产品图、IP 形象、AI分镜、视频画面及宣传素材等，AI漫剧制作。参与《追风者》《三大队》《欢迎来到我身边 》等项目的海报创意制作，分镜绘制和初稿设计。",
+        "北京像素绽放科技有限公司/AIGC创作设计师　　　　　2023.11-2026.06",
+        "负责AI视觉内容创作与商业设计落地，参与多类型AIGC项目的视觉方案制作，包括电商、剧集的人物海报，品牌KV、人物写真、产品图、IP 形象、AI分镜、AI视频画面及宣传素材，AI漫剧制作等。为中小品牌提供一站式AI视觉内容解决方案",
         "　　",
         "　　",
         "北京丹青映画传媒科技有限公司/平面设计师　　　　　　　2021.11-2023.10",
@@ -68,34 +68,34 @@ window.SITE_CONTENT = {
     "emptyImageText": "后期替换为真实制作过程图片",
     "videos": [
       {
-        "title": " ",
-        "duration": "02:32",
-        "style": "动漫故事 / 游戏IP二创",
-        "tools": "Chat GPT/Seedance2.0/Gemini Omni/Photoshop/剪映",
+        "title": "  ",
+        "duration": "2:42",
+        "style": "恐怖/悬疑",
+        "tools": "LibTV/Midjourney/Nanobanana/Seedance2.0/Kling/剪映",
         "steps": [
           {
             "title": "概念发想 & 创意方向",
-            "description": "基于各个游戏内剑客角色IP创作，《只狼》中的狼意外获得武功秘籍，进入各种IP角色共存的交界地战斗的故事，视频为第一集内容。"
+            "description": "根据民宿小说创作，黄河不只是河，它是一条埋葬秘密、债命与怨魂的活物。捞尸人捞上来的不是尸体，而是一段不该重见天日的旧案。去除女子阴债，为清白女子引渡元阴"
           },
           {
-            "title": "脚本写作",
-            "description": "将想法和大概故事剧情发展发给GPT让他润色故事细节和出剧情分镜脚本，再根据实际情况自己删减。"
+            "title": "角色三视图、场景、物品设计",
+            "description": "  "
           },
           {
             "title": "分镜设计",
-            "description": "用ChatGPT或者MJ把文字脚本转为镜头画面，确定景别、运动方式和关键视觉转场，给关键角色做三视图和场景9宫格或者全景图保持人物场景一致性，打斗复杂画面做黑白火火柴人线稿更好控制人物动作。"
+            "description": "生成分镜图和一些关键画面图片"
           },
           {
             "title": "素材收集",
-            "description": "用即梦或者可灵生成视频片段。"
+            "description": "用Kling或者Seedance生成视频，用可灵对真人把控会好一些，限制宽泛一些"
           },
           {
-            "title": "后期制作（剪辑、调色、音效、动效）",
-            "description": "剪映完成剪辑节奏和声音设计。"
+            "title": "后期制作",
+            "description": "使用剪映完成剪辑"
           }
         ],
-        "poster": "works/Project/project01.jpg",
-        "url": "https://www.bilibili.com/video/BV1XYjT6DEuZ/?spm_id_from=333.1387.upload.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
+        "poster": "works/Project/Project04.jpg",
+        "url": "https://www.bilibili.com/video/BV1dfjA67E8G/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
       },
       {
         "title": "  ",
@@ -158,34 +158,34 @@ window.SITE_CONTENT = {
         "url": "https://www.bilibili.com/video/BV1Nfjw6bEiR/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
       },
       {
-        "title": "  ",
-        "duration": "2:42",
-        "style": "恐怖/悬疑",
-        "tools": "LibTV/Midjourney/Nanobanana/Seedance2.0/Kling/剪映",
+        "title": " ",
+        "duration": "02:32",
+        "style": "动漫故事 / 游戏IP二创",
+        "tools": "Chat GPT/Seedance2.0/Gemini Omni/Photoshop/剪映",
         "steps": [
           {
             "title": "概念发想 & 创意方向",
-            "description": "根据民宿小说创作，黄河不只是河，它是一条埋葬秘密、债命与怨魂的活物。捞尸人捞上来的不是尸体，而是一段不该重见天日的旧案。去除女子阴债，为清白女子引渡元阴"
+            "description": "基于各个游戏内剑客角色IP创作，《只狼》中的狼意外获得武功秘籍，进入各种IP角色共存的交界地战斗的故事，视频为第一集内容。"
           },
           {
-            "title": "角色三视图、场景、物品设计",
-            "description": "  "
+            "title": "脚本写作",
+            "description": "将想法和大概故事剧情发展发给GPT让他润色故事细节和出剧情分镜脚本，再根据实际情况自己删减。"
           },
           {
             "title": "分镜设计",
-            "description": "生成分镜图和一些关键画面图片"
+            "description": "用ChatGPT或者MJ把文字脚本转为镜头画面，确定景别、运动方式和关键视觉转场，给关键角色做三视图和场景9宫格或者全景图保持人物场景一致性，打斗复杂画面做黑白火火柴人线稿更好控制人物动作。"
           },
           {
             "title": "素材收集",
-            "description": "用Kling或者Seedance生成视频，用可灵对真人把控会好一些，限制宽泛一些"
+            "description": "用即梦或者可灵生成视频片段。"
           },
           {
-            "title": "后期制作",
-            "description": "使用剪映完成剪辑"
+            "title": "后期制作（剪辑、调色、音效、动效）",
+            "description": "剪映完成剪辑节奏和声音设计。"
           }
         ],
-        "poster": "works/Project/Project04.jpg",
-        "url": "https://www.bilibili.com/video/BV1dfjA67E8G/?spm_id_from=333.1387.homepage.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
+        "poster": "works/Project/project01.jpg",
+        "url": "https://www.bilibili.com/video/BV1XYjT6DEuZ/?spm_id_from=333.1387.upload.video_card.click&vd_source=656c5ebc0229abbe7a59000968ff1a4a"
       },
       {
         "title": "  ",

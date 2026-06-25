@@ -2380,7 +2380,7 @@ function renderProjectProcessPage() {
   projects.forEach((project, projectIndex) => {
     const article = document.createElement("article");
     article.className = "project-video-panel";
-    const isInitiallyOpen = projectIndex === 0;
+    const isInitiallyOpen = false;
     article.classList.toggle("is-open", isInitiallyOpen);
 
     const summary = document.createElement("div");

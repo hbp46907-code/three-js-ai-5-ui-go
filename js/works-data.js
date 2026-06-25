@@ -462,134 +462,38 @@ window.WORKS_MANIFEST = {
     },
     {
       "type": "image",
-      "title": "2-1-6",
-      "src": "works/Poster/2-1-6.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
       "title": "2-2-1",
       "src": "works/Poster/2-2-1.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "layout": "portrait"
     },
     {
       "type": "image",
       "title": "2-2-2",
       "src": "works/Poster/2-2-2.png",
-      "layout": "portrait",
-      "width": 940,
-      "height": 1672
+      "layout": "portrait"
     },
     {
       "type": "image",
       "title": "2-2-3",
       "src": "works/Poster/2-2-3.png",
-      "layout": "portrait",
-      "width": 940,
-      "height": 1672
+      "layout": "portrait"
     },
     {
       "type": "image",
       "title": "2-2-4",
       "src": "works/Poster/2-2-4.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "layout": "portrait"
     },
     {
       "type": "image",
       "title": "2-2-5",
       "src": "works/Poster/2-2-5.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
+      "layout": "portrait"
     },
     {
       "type": "image",
       "title": "2-2-6",
       "src": "works/Poster/2-2-6.png",
-      "layout": "portrait",
-      "width": 940,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "2-3-1",
-      "src": "works/Poster/2-3-1.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "2-3-2",
-      "src": "works/Poster/2-3-2.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "2-3-3",
-      "src": "works/Poster/2-3-3.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "2-3-4",
-      "src": "works/Poster/2-3-4.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "2-3-5",
-      "src": "works/Poster/2-3-5.png",
-      "layout": "portrait",
-      "width": 941,
-      "height": 1672
-    },
-    {
-      "type": "image",
-      "title": "2-4-1",
-      "src": "works/Poster/2-4-1.png",
-      "layout": "portrait"
-    },
-    {
-      "type": "image",
-      "title": "2-4-2",
-      "src": "works/Poster/2-4-2.png",
-      "layout": "portrait"
-    },
-    {
-      "type": "image",
-      "title": "2-4-3",
-      "src": "works/Poster/2-4-3.png",
-      "layout": "portrait"
-    },
-    {
-      "type": "image",
-      "title": "2-4-4",
-      "src": "works/Poster/2-4-4.png",
-      "layout": "portrait"
-    },
-    {
-      "type": "image",
-      "title": "2-4-5",
-      "src": "works/Poster/2-4-5.png",
-      "layout": "portrait"
-    },
-    {
-      "type": "image",
-      "title": "2-4-6",
-      "src": "works/Poster/2-4-6.png",
       "layout": "portrait"
     },
     {
@@ -775,72 +679,32 @@ window.WORKS_MANIFEST = {
       "title": "1-2-1",
       "src": "works/Project/1-2-1.png",
       "layout": "wide",
-      "width": 2529,
-      "height": 1386
-    },
-    {
-      "type": "image",
-      "title": "1-2-2",
-      "src": "works/Project/1-2-2.png",
-      "layout": "portrait",
-      "width": 908,
-      "height": 1170
+      "width": 1920,
+      "height": 1080
     },
     {
       "type": "image",
       "title": "1-3-1",
       "src": "works/Project/1-3-1.png",
-      "layout": "portrait",
-      "width": 1448,
-      "height": 1086
+      "layout": "wide",
+      "width": 2048,
+      "height": 1152
     },
     {
       "type": "image",
       "title": "1-3-2",
       "src": "works/Project/1-3-2.png",
       "layout": "wide",
-      "width": 1672,
-      "height": 941
+      "width": 2048,
+      "height": 1152
     },
     {
       "type": "image",
       "title": "1-3-3",
       "src": "works/Project/1-3-3.png",
-      "layout": "portrait",
-      "width": 1448,
-      "height": 1086
-    },
-    {
-      "type": "image",
-      "title": "1-4-1",
-      "src": "works/Project/1-4-1.png",
       "layout": "wide",
-      "width": 2555,
-      "height": 1394
-    },
-    {
-      "type": "image",
-      "title": "1-4-2",
-      "src": "works/Project/1-4-2.png",
-      "layout": "portrait",
-      "width": 1542,
-      "height": 1184
-    },
-    {
-      "type": "image",
-      "title": "1-4-3",
-      "src": "works/Project/1-4-3.png",
-      "layout": "portrait",
-      "width": 1448,
-      "height": 1086
-    },
-    {
-      "type": "image",
-      "title": "1-5-1",
-      "src": "works/Project/1-5-1.png",
-      "layout": "wide",
-      "width": 2560,
-      "height": 1529
+      "width": 2048,
+      "height": 1152
     },
     {
       "type": "image",
@@ -911,32 +775,72 @@ window.WORKS_MANIFEST = {
       "title": "4-2-1",
       "src": "works/Project/4-2-1.png",
       "layout": "wide",
-      "width": 1920,
-      "height": 1080
+      "width": 2529,
+      "height": 1386
+    },
+    {
+      "type": "image",
+      "title": "4-2-2",
+      "src": "works/Project/4-2-2.png",
+      "layout": "portrait",
+      "width": 908,
+      "height": 1170
     },
     {
       "type": "image",
       "title": "4-3-1",
       "src": "works/Project/4-3-1.png",
-      "layout": "wide",
-      "width": 2048,
-      "height": 1152
+      "layout": "portrait",
+      "width": 1448,
+      "height": 1086
     },
     {
       "type": "image",
       "title": "4-3-2",
       "src": "works/Project/4-3-2.png",
       "layout": "wide",
-      "width": 2048,
-      "height": 1152
+      "width": 1672,
+      "height": 941
     },
     {
       "type": "image",
       "title": "4-3-3",
       "src": "works/Project/4-3-3.png",
+      "layout": "portrait",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "type": "image",
+      "title": "4-4-1",
+      "src": "works/Project/4-4-1.png",
       "layout": "wide",
-      "width": 2048,
-      "height": 1152
+      "width": 2555,
+      "height": 1394
+    },
+    {
+      "type": "image",
+      "title": "4-4-2",
+      "src": "works/Project/4-4-2.png",
+      "layout": "portrait",
+      "width": 1542,
+      "height": 1184
+    },
+    {
+      "type": "image",
+      "title": "4-4-3",
+      "src": "works/Project/4-4-3.png",
+      "layout": "portrait",
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "type": "image",
+      "title": "4-5-1",
+      "src": "works/Project/4-5-1.png",
+      "layout": "wide",
+      "width": 2560,
+      "height": 1529
     },
     {
       "type": "image",
